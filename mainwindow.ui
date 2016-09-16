@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>229</width>
-    <height>181</height>
+    <width>150</width>
+    <height>84</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,45 +17,28 @@
    <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QLCDNumber" name="lcdNumber">
+   <widget class="QLabel" name="displayTime">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>191</width>
-      <height>111</height>
+      <x>18</x>
+      <y>15</y>
+      <width>121</width>
+      <height>51</height>
      </rect>
     </property>
-    <property name="toolTip">
-     <string>Current TIme</string>
+    <property name="font">
+     <font>
+      <pointsize>48</pointsize>
+     </font>
     </property>
-    <property name="digitCount">
-     <number>4</number>
+    <property name="text">
+     <string>TextLabel</string>
     </property>
-    <property name="segmentStyle">
-     <enum>QLCDNumber::Flat</enum>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>229</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-  </widget>
-  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

@@ -11,18 +11,16 @@ MainWindow::MainWindow(QWidget *parent) :
 
     TimeConversion time = TimeConversion();
     QString internetTime = time.getInternetTime();
-
     QTimer *timer = new QTimer(this);
-    logTime(internetTime);
-    connect(timer, SIGNAL(timeout()), this, SLOT(logTime(internetTime)));
+    connect(timer, SIGNAL(timeout()), this, SLOT(logTime()));
     timer->start(1000);
 
     ui->setupUi(this);
 
 }
 
-void MainWindow::logTime(QString internetTime) {
-    qInfo() << internetTime;
+void MainWindow::logTime(){
+    qInfo() << this->internetTime;
 }
 
 MainWindow::~MainWindow()

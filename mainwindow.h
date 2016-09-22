@@ -19,7 +19,8 @@ private:
     Ui::MainWindow *ui;
 
 public slots:
-    void logTime(QString internetTime);
+    void logTime();
+
 };
 
 #endif // MAINWINDOW_H

@@ -4,23 +4,31 @@
 #include <QDebug>
 #include <QTimer>
 
-MainWindow::MainWindow(QWidget *parent) :
+MainWindow::    MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-
     TimeConversion time = TimeConversion();
-    QString internetTime = time.getInternetTime();
+    this->currentTime = time.getInternetTime();
+    ;
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(logTime()));
     timer->start(1000);
 
     ui->setupUi(this);
-
+    updateTimeDisplay();
 }
 
 void MainWindow::logTime(){
-    qInfo() << this->internetTime;
+    QString timeNow = TimeConversion().getInternetTime();
+    if(timeNow != currentTime) {
+        this->currentTime = timeNow;
+        updateTimeDisplay();
+    }
+}
+
+void MainWindow::updateTimeDisplay() {
+    ui->displayTime->setText(this->currentTime);
 }
 
 MainWindow::~MainWindow()

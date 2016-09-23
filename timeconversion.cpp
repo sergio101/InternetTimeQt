@@ -16,6 +16,7 @@ QString TimeConversion::getInternetTime() {
     int minute = baseTime.time().minute();
     int second = baseTime.time().second();
     int internetTime = ((hour  * 3600) + (minute * 60) + (second)) / 86.4;
-    QString returnTime = QString(printf("@%03d",internetTime));
+    //QString returnTime = QString(printf("@%03d",internetTime));
+    QString returnTime = "@" + QString("%1").arg(internetTime, 3, 10, QChar('0'));
     return returnTime;
 }

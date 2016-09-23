@@ -8,8 +8,6 @@ class TimeConversion
 public:
     TimeConversion();
     QString getInternetTime();
-
-
 };
 
 #endif // TIMECONVERSION_H

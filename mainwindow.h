@@ -17,6 +17,8 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QString currentTime;
+    void updateTimeDisplay();
 
 public slots:
     void logTime();

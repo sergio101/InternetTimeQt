@@ -14,9 +14,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    timeconversion.cpp
+    timeconversion.cpp \
+    preferences.cpp
 
 HEADERS  += mainwindow.h \
-    timeconversion.h
+    timeconversion.h \
+    preferences.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    preferences.ui

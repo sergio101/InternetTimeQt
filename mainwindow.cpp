@@ -10,7 +10,7 @@ MainWindow::    MainWindow(QWidget *parent) :
 {
     TimeConversion time = TimeConversion();
     this->currentTime = time.getInternetTime();
-    ;
+
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(logTime()));
     timer->start(1000);
